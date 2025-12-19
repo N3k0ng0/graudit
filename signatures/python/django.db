@@ -1,1 +1,3 @@
+RawSQL[[:space:]]*\(
+\.extra[[:space:]]*\(.*tables=
 csrf[\._]exempt

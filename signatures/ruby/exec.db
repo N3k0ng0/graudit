@@ -1,8 +1,9 @@
-\.instance_eval.*
+(class|module|instance)_eval([[:space:]]+.*|[[:space:]]*\()
 eval([[:space:]]*\(|[[:space:]]+[^\(])
 spawn([[:space:]]*\(|[[:space:]]+[^\(])
 system([[:space:]]*\(|[[:space:]]+").*\#\{[^\}]+\}
 system[[:space:]]*\(
+exec[[:space:]]*\(
 \.open[[:space:]]*\(
 \.(public_)?send[[:space:]]*\(
 `.*#\{[^`]+`

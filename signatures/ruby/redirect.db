@@ -1,0 +1,1 @@
+redirect_to[[:space:]]+(url_from[[:space:]]*\()?[Pp][Aa][Rr][Aa][Mm][a-z]*\[[^]]+\]

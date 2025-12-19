@@ -1,0 +1,2 @@
+map.connect[[:space:]]+['"]:controller/:action/:id['"]
+match[[:space:]]+['"]:controller\(/:action\(/:id\(.:format\)\)\)['"]

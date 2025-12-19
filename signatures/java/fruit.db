@@ -9,5 +9,5 @@ eval[[:space:]]*\([^\)\;\"]*([Rr]eq(uest)?[\.\)]|\.[Gg]et[Pp]aram[[:space:]]*[\[
 (WHERE|where)[[:space:]]+[^;]+=[[:space:]]*[\'\"][\'\"]?[[:space:]]*\+[[:space:]]*[^\"\']+
 [\'\" ]+AND[[:space:]]+.*=[[:space:]]*[\'\"][\'\"]?[[:space:]]*\+[[:space:]]*[^\"\']
 (LIKE|like)[[:space:]]+[\'\"A-Za-z0-9%]+[\'\"][\'\"]?[[:space:]]*\+[[:space:]]*[^\"\']
-(ORDER[[:space:]]+BY|order[[:space:]]+by)[[:space:]]+.*[\'\"][\'\"]?[[:space:]]*\+[[:space:]]*[^\"\']
+(ORDER[[:space:]]+BY|order[[:space:]]+by)[[:space:]]+[A-Za-z0-9_, -]*[\'\"][\'\"]?[[:space:]]*\+[[:space:]]*[^\"\']
 (LIMIT|limit)[[:space:]]+([0-9,]+)?[;:space:]]*[\'\"][\'\"]?[[:space:]]*\+[[:space:]]*[^\"\']

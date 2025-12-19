@@ -5,7 +5,7 @@
 set -- $GRARGS $@
 set -e
 set -o pipefail
-VERSION='3.9'
+VERSION='4.0'
 basedir=$(dirname "$0")
 BINFILE=$(which grep)
 
@@ -44,7 +44,7 @@ banner() {
         \___  /|__|  (____  /____/\____ | |__||__|  
        /_____/            \/           \/           
               grep rough audit - static analysis tool
-                  v3.9 written by @Wireghoul
+                  v4.0 written by @Wireghoul
 =================================[justanotherhacker.com]==='
     fi
 }
@@ -120,8 +120,8 @@ while getopts "AbBhvilLzZd:c:x:" opt; do
             exit 0
         ;;
         b)
-            export GREP_COLORS='ms=93:sl=:cx=:fn=94:ln=92:bn=92:se=32'
-            export GREP_COLOR='1;35'
+            export GREP_COLORS='ms=93:mc=:sl=:cx=:fn=94:ln=92:bn=92:se=32'
+            export GREP_COLOR='1;35;'
         ;;
         z)
             color='none'
@@ -215,4 +215,5 @@ sed -e"s/$(printf '\r')//g" -e"s/^\(\x1b\[.*m\x1b\[K\)--\(\x1b\[.*\x1b\[K\)$/\1#
 sed -e"$vimlines" -e"$zimlines"
 SUCCESS=$?
 export GREP_COLORS="$OLD_COLORS"
+export GREP_COLOR="$OLD_COLOR"
 exit $SUCCESS

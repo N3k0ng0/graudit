@@ -35,9 +35,9 @@ StoredProcedure[[:space:]]*\(
 #System\.Data\.sql
 [Cc]onnection[Ss]tr(ing)?[[:space:]]*\=[[:space:]]*[\'\"].*
 # Stricter matching to avoid javascript spam
-[\'\"][Ss][Ee][Ll][Ee][Cc][Tt][[:space:]]+.*(\{[0-9]+\}|[\'\"][[:space:]]+\+)
-(WHERE|where)[[:space:]]+[^\;]+=.*(\{[0-9]+\}|[\'\"][[:space:]]+\+)
-[\'\" ]+AND[[:space:]]+.*=.*(\{[0-9]+\}|[\'\"][[:space:]]+\+)
-(LIKE|like)[[:space:]]+[^\(\)\;]+(\{[0-9]+\}|[\'\"][[:space:]]+\+)
-(ORDER[[:space:]]+BY|order[[:space:]]+by)[[:space:]]+.*(\{[0-9]+\}|[\'\"][[:space:]]+\+)
-(LIMIT|limit)[[:space:]]+.*(\{[0-9]+\}|[\'\"][[:space:]]+\+)
+[\'\"][Ss][Ee][Ll][Ee][Cc][Tt][[:space:]]+.*(\{[A-Za-z0-9]+\}|[\'\"][[:space:]]+\+)
+(WHERE|where)[[:space:]]+[^\;]+=.*(\{[A-Za-z0-9]+\}|[\'\"][[:space:]]+\+)
+[\'\" ]+AND[[:space:]]+.*=.*(\{[A-Za-z0-9]+\}|[\'\"][[:space:]]+\+)
+(LIKE|like)[[:space:]]+[^\(\)\;]+(\{[A-Za-z0-9]+\}|[\'\"][[:space:]]+\+)
+(ORDER[[:space:]]+BY|order[[:space:]]+by)[[:space:]]+.*(\{[A-Za-z0-9]+\}|[\'\"][[:space:]]+\+)
+(LIMIT|limit)[[:space:]]+.*(\{[A-Za-z0-9]+\}|[\'\"][[:space:]]+\+)

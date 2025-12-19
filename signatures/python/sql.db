@@ -1,5 +1,6 @@
 [Ww][Hh][Ee][Rr][Ee][[:space:]]+.*=[[:space:]]*\{\}
 [Aa][Nn][Dd][[:space:]]+.*=[[:space:]]*\{\}
+[Ww][Hh][Ee][Rr][Ee][[:space:]]+.*=.*%s.*%[[:space:]]+[A-Za-z0-9]+
 \.filter[[:space:]]*\([[:space:]]*text[[:space:]]*\([^\)]+%s
 \.create_function[[:space:]]*\(
 \.create_aggregate[[:space:]]*\(

@@ -25,3 +25,6 @@ render[[:space:]]+:?(text|plain):?.*#\{[^\}]+\}
 render[[:space:]]+[^:]+:.*\#\{[^\}]+
 render.*params?\[
 <%=[[:space:]]*[Pp][Aa][Rr][Aa][Mm]
+<%=[[:space:]]*[Cc][Oo][Oo][Kk][Ii][Ee]
+<%=[[:space:]]*@[A-Za-z0-9]+
+escape_html_entities_in_json[[:space:]]*=[[:space:]]*[Ff][Aa][Ll][Ss][Ee]

@@ -37,12 +37,12 @@ StoredProcedure[[:space:]]*\(
 #System\.Data\.sql
 [Cc]onnection[Ss]tr(ing)?[[:space:]]*\=[[:space:]]*[\'\"].*
 # Stricter matching to avoid javascript spam
-[\'\"][Ss][Ee][Ll][Ee][Cc][Tt][[:space:]]+.*(\{[0-9]+\}|[\'\"][[:space:]]+\+)
-(WHERE|where)[[:space:]]+[^\;]+=.*(\{[0-9]+\}|[\'\"][[:space:]]+\+)
-[\'\" ]+AND[[:space:]]+.*=.*(\{[0-9]+\}|[\'\"][[:space:]]+\+)
-(LIKE|like)[[:space:]]+[^\(\)\;]+(\{[0-9]+\}|[\'\"][[:space:]]+\+)
-(ORDER[[:space:]]+BY|order[[:space:]]+by)[[:space:]]+.*(\{[0-9]+\}|[\'\"][[:space:]]+\+)
-(LIMIT|limit)[[:space:]]+.*(\{[0-9]+\}|[\'\"][[:space:]]+\+)
+[\'\"][Ss][Ee][Ll][Ee][Cc][Tt][[:space:]]+.*(\{[A-Za-z0-9]+\}|[\'\"][[:space:]]+\+)
+(WHERE|where)[[:space:]]+[^\;]+=.*(\{[A-Za-z0-9]+\}|[\'\"][[:space:]]+\+)
+[\'\" ]+AND[[:space:]]+.*=.*(\{[A-Za-z0-9]+\}|[\'\"][[:space:]]+\+)
+(LIKE|like)[[:space:]]+[^\(\)\;]+(\{[A-Za-z0-9]+\}|[\'\"][[:space:]]+\+)
+(ORDER[[:space:]]+BY|order[[:space:]]+by)[[:space:]]+.*(\{[A-Za-z0-9]+\}|[\'\"][[:space:]]+\+)
+(LIMIT|limit)[[:space:]]+.*(\{[A-Za-z0-9]+\}|[\'\"][[:space:]]+\+)
 \.Raw[[:space:]]*\(.*\)
 \.Exec[[:space:]]*\(.*\)
 \.ExecContext[[:space:]]*\(.*\)
@@ -113,8 +113,10 @@ db2_.*[[:space:]]*\(.*\$.*\)
 ->sqliteCreate(Agregate|Collation|Function)[[:space:]]*\(
 ->create(Aggregate|Collation|Function)[[:space:]]*\(
 querySingle[[:space:]]*\(
+[A-Z]+::expr\(.*\$.*\)
 [Ww][Hh][Ee][Rr][Ee][[:space:]]+.*=[[:space:]]*\{\}
 [Aa][Nn][Dd][[:space:]]+.*=[[:space:]]*\{\}
+[Ww][Hh][Ee][Rr][Ee][[:space:]]+.*=.*%s.*%[[:space:]]+[A-Za-z0-9]+
 \.filter[[:space:]]*\([[:space:]]*text[[:space:]]*\([^\)]+%s
 \.create_function[[:space:]]*\(
 \.create_aggregate[[:space:]]*\(
@@ -125,6 +127,14 @@ querySingle[[:space:]]*\(
 \.load_extension[[:space:]]*\(
 \.set_authorizer[[:space:]]*\(
 \.set_progress_handler[[:space:]]*\(
+\.((destroy|delete|update|find)_(all|by)(_name|_sql)?|(re)?where|having|not)[[:space:]]*\([[:space:]]*["'].*\#\{
+\.(from|group)[[:space:]]*\([^:\)]+:
+\.(calculate|average|count|maximum|minimum|sum|join|lock|(re)?select)[[:space:]]*\(.*\[:
+\.exists\?.*:
+\.find_(or_(create|initialize)_)?by!?.*:
+Arel\.sql\(.*["'].*#\{
+conditions[[:space:]]*[:=>]+[[:space:]]*.*\#\{[^\}]+\}
+\.where[[:space:]]*\([[:space:]]*['"].*['"][[:space:]]*\+
 (WHERE|where)[[:space:]]+.*=.*[\'\"][[:space:]]*\+.*
 [\'\" ]+AND[[:space:]]+.*=.*\+.*
 (LIKE|like)[[:space:]]+[^\;]+\+.*

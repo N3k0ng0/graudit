@@ -1,0 +1,3 @@
+\.run[[:space:]]*\(.*[Dd]ebug[[:space:]]*=[[:space:]]*True
+\.secret_key[[:space:]]*=[[:space:]]*['"][^'"]+
+render_template_string[[:space:]]*\(.*\{[^\}]+\}

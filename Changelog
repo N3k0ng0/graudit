@@ -1,3 +1,22 @@
+4.0		2025 Dec 19
+		Updated supression rules
+		Updated sql rules
+		Updated php rules
+		Updated dotnet rules
+		Updated ruby rules
+		Updated secrets rules
+		Updated xss rules
+		Updated exec rules
+		Updated ampscript rules
+		Updated python rules
+		Updated java rules
+		Updated typescript rules
+		Reduced false positive matches from compressed js
+		Fixed an error with -b for some versions of grep
+		Minor bugfix for graufflehog script
+		Added seventaint.sh script to misc
+		Added 3partyjs rules to misc
+
 3.9		2025 May 22
 		Added giterate misc script
 		Added snumerate misc script

@@ -1,0 +1,2 @@
+\.set_missing_host_key_policy[[:space:]]*\([^\)]+\.AutoAddPolicy
+\.exec_command[[:space:]]*\(

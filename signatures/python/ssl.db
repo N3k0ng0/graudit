@@ -1,0 +1,3 @@
+\.(post|get|head)[[:space:]]*\([^,]+,[[:space:]]*verify[[:space:]]*=[[:space:]]*False
+SSLv2_METHOD
+\.generate_private_key[[:space:]]*\(

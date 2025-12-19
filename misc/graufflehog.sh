@@ -2,7 +2,7 @@
 # Script that used find and graudit to audit a directory for "secrets"
 # Useful for decompiled jar files, extracted firmware images etc.
 if [ -z $1 ]; then
-    print "Usage: $0 <directory>"
+    echo "Usage: $0 <directory>"
     exit 2
 fi
 echo "Looking for interresting files"

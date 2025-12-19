@@ -243,6 +243,7 @@ db2_.*[[:space:]]*\(.*\$.*\)
 ->sqliteCreate(Agregate|Collation|Function)[[:space:]]*\(
 ->create(Aggregate|Collation|Function)[[:space:]]*\(
 querySingle[[:space:]]*\(
+[A-Z]+::expr\(.*\$.*\)
 CURLOPT_SSL_VERIFY(HOST|PEER), *([Ff][Aa][Ll][Ss][Ee]|0)
 unserialize[[:space:]]*\(.*\$.*
 file_exists[[:space:]]*\(\"?\$.*
